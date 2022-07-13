@@ -5,25 +5,31 @@ var addTask = () => {
   task =
     '<p>' +
     task +
-    '</p><input type="checkbox" name="done"><a href="#" class="delete">Detete</a>'
+    '</p><input type="checkbox" name="done" class="checkTask">' +
+    '<a href="#" class="delete">Delete</a>' +
+    '<a href="#" class="editTask">Edit</a>'
   newTask.innerHTML = task
   tasks.appendChild(newTask)
 }
 var clickElement = (e) => {
-  switch (e.target.className) {
+  var classTask = e.target.className
+  var target = e.target
+  switch (classTask) {
     case 'addTask':
       addTask()
       break
     case 'delete':
-      deleteTask()
+      deleteTask(target)
       break
     case 'editTask':
       editTask()
       break
   }
 }
-var deleteTask = () => {
-  console.log("i'll be deletin'")
+var deleteTask = (target) => {
+  if (target.className == 'delete') {
+    target.parentElement.remove()
+  }
 }
 var editTask = () => {
   console.log("i'll be editin'")
