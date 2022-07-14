@@ -9,7 +9,7 @@ var addTask = () => {
     '<button class="checkTask">Done</button>' +
     '<button class="editTask">Edit</button>' +
     '<input type="button" value="saveEdit" class="TaskFieldSave" hidden>' +
-    '<a href="#" class="delete">Delete</a>'
+    '<button class="delete">Delete</button>'
   newTask.innerHTML = task
   tasks.appendChild(newTask)
 }
@@ -18,6 +18,7 @@ var clickElement = (e) => {
   var target = e.target
   switch (classTask) {
     case 'addTask':
+      e.preventDefault()
       addTask()
       break
     case 'delete':
