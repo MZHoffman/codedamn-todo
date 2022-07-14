@@ -13,6 +13,11 @@ body {
 i {
   pointer-events: none;
 }
+h1 {
+  font-size: 78px;
+  color: white;
+  font-family: helvetica;
+}
 input,
 input:focus,
 input:disabled {
