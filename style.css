@@ -22,7 +22,6 @@ input,
 input:focus,
 input:disabled {
   height: 30px;
-  width: 400px;
   border: 0;
   font-size: 20px;
   padding: 5px 10px;
