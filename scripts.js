@@ -11,6 +11,7 @@ var addTask = () => {
     '<button class="delete"><i class="fa-solid fa-trash-can"></i></button>'
   newTask.innerHTML = task
   tasks.appendChild(newTask)
+  document.querySelector('.taskToAdd').value = ''
 }
 var clickElement = (e) => {
   var classTask = e.target.className
