@@ -1,0 +1,55 @@
+.main {
+  max-width: 50%;
+  margin: 0 auto;
+}
+body {
+  background-image: linear-gradient(to bottom right, red, yellow);
+  height: 100vh;
+}
+.addingTask {
+  display: flex;
+  margin-bottom: 10px;
+}
+i {
+  pointer-events: none;
+}
+input,
+input:focus,
+input:disabled {
+  height: 30px;
+  width: 400px;
+  border: 0;
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: white;
+  margin-bottom: 2px;
+  color: black;
+  flex-grow: 1;
+}
+.tasks > div {
+  display: flex;
+}
+.checked {
+  text-decoration: line-through;
+}
+button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  font-size: 20px;
+  padding: 0;
+  background-color: white;
+  margin-bottom: 2px;
+}
+.checkTask {
+  background-color: #03c03d;
+}
+.editTask {
+  background-color: #0070fe;
+}
+.delete {
+  background-color: #e52525;
+}
+.TaskFieldSave {
+  background-color: #03c03d;
+}
