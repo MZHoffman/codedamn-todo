@@ -6,10 +6,10 @@ var addTask = () => {
     '<input disabled type="text" name="editTaskField" class="editTaskField" value="' +
     task +
     '"> ' +
-    '<button class="checkTask">Done</button>' +
-    '<button class="editTask">Edit</button>' +
-    '<input type="button" value="saveEdit" class="TaskFieldSave" hidden>' +
-    '<button class="delete">Delete</button>'
+    '<button class="checkTask"><i class="fa-solid fa-check"></i></button>' +
+    '<button class="editTask"><i class="fa-solid fa-pen-to-square"></i></button>' +
+    '<button class="TaskFieldSave" value="saveEdit" hidden><i class="fa-solid fa-floppy-disk"></i></button>' +
+    '<button class="delete"><i class="fa-solid fa-trash-can"></i></button>'
   newTask.innerHTML = task
   tasks.appendChild(newTask)
 }
