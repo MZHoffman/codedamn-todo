@@ -6,7 +6,7 @@ var addTask = () => {
     '<input disabled type="text" name="editTaskField" class="editTaskField" value="' +
     task +
     '"> ' +
-    '<input type="checkbox" name="done" class="checkTask">' +
+    '<button class="checkTask">Done</button>' +
     '<button class="editTask">Edit</button>' +
     '<input type="button" value="saveEdit" class="TaskFieldSave" hidden>' +
     '<a href="#" class="delete">Delete</a>'
@@ -28,6 +28,9 @@ var clickElement = (e) => {
       break
     case 'TaskFieldSave':
       saveEdit(target)
+      break
+    case 'checkTask':
+      checkTask(target)
       break
   }
 }
@@ -56,6 +59,12 @@ var saveEdit = (target) => {
     .querySelector('.TaskFieldSave')
     .setAttribute('hidden', 'hidden')
   target.parentElement.querySelector('.editTask').removeAttribute('hidden')
+}
+var checkTask = (target) => {
+  console.log(target.parentElement.querySelector('.editTaskField'))
+  target.parentElement
+    .querySelector('.editTaskField')
+    .classList.toggle('checked')
 }
 const main = document.querySelector('.main')
 main.addEventListener('click', clickElement)
